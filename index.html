@@ -36,21 +36,21 @@
           },
           colors: {
             noir: {
-              950: '#05070B',
-              900: '#0B0F17',
-              850: '#101724',
-              800: '#192336',
-              700: '#23324C',
+              950: '#070407',
+              900: '#0F080E',
+              850: '#170D16',
+              800: '#231221',
+              700: '#321A2F',
             },
-            baby: {
-              50: '#F0F9FF',
-              100: '#E0F2FE',
-              200: '#BAE6FD',
-              300: '#7DD3FC',
-              400: '#38BDF8',
-              500: '#0EA5E9',
-              muted: 'rgba(186, 230, 253, 0.7)',
-              dim: 'rgba(125, 211, 252, 0.4)',
+            shock: {
+              50: '#FFF1F6',
+              100: '#FFE4EF',
+              200: '#FFCCE3',
+              300: '#FF99CA',
+              400: '#FF66B2',
+              500: '#FF3399',
+              muted: 'rgba(255, 179, 217, 0.75)',
+              dim: 'rgba(255, 102, 178, 0.45)',
             }
           }
         }
@@ -105,41 +105,41 @@
 
   <style>
     body {
-      background-color: #05070B;
-      color: #BAE6FD;
+      background-color: #070407;
+      color: #FFCCE3;
       font-family: 'Space Grotesk', -apple-system, sans-serif;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
     }
 
     ::selection {
-      background-color: rgba(186, 230, 253, 0.35);
+      background-color: rgba(255, 102, 178, 0.35);
       color: #FFFFFF;
     }
 
-    /* Tipografia com Gradiente Azul Bebê Laranja/Prateado Límpido */
-    .text-baby-gradient {
-      background: linear-gradient(180deg, #FFFFFF 0%, #BAE6FD 55%, #7DD3FC 100%);
+    /* Tipografia com Gradiente Rosa Choque Claro */
+    .text-shock-gradient {
+      background: linear-gradient(180deg, #FFFFFF 0%, #FFCCE3 52%, #FF66B2 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
-    /* Bordas Finíssimas de 1px em Azul Bebê Translúcido */
-    .border-baby-1px {
-      border: 1px solid rgba(186, 230, 253, 0.16);
+    /* Bordas Finíssimas de 1px em Rosa Choque Claro Translúcido */
+    .border-shock-1px {
+      border: 1px solid rgba(255, 102, 178, 0.18);
       transition: all 0.3s ease;
     }
-    .border-baby-1px:hover {
-      border-color: rgba(186, 230, 253, 0.45);
-      box-shadow: 0 0 25px rgba(186, 230, 253, 0.08);
+    .border-shock-1px:hover {
+      border-color: rgba(255, 102, 178, 0.55);
+      box-shadow: 0 0 25px rgba(255, 102, 178, 0.12);
     }
 
-    /* Glows Pontuais em Azul Bebê Suave */
+    /* Glows Pontuais em Rosa Choque Claro Suave */
     .glow-spot-ambient {
-      background: radial-gradient(circle 600px at 50% 0%, rgba(186, 230, 253, 0.08), transparent 70%);
+      background: radial-gradient(circle 600px at 50% 0%, rgba(255, 102, 178, 0.08), transparent 70%);
     }
     .glow-spot-bottom {
-      background: radial-gradient(circle 600px at 20% 100%, rgba(125, 211, 252, 0.05), transparent 75%);
+      background: radial-gradient(circle 600px at 20% 100%, rgba(255, 51, 153, 0.05), transparent 75%);
     }
 
     /* Textura de Ruído Orgânico Suave */
@@ -159,14 +159,14 @@
       width: 5px;
     }
     ::-webkit-scrollbar-track {
-      background: #05070B;
+      background: #070407;
     }
     ::-webkit-scrollbar-thumb {
-      background: #192336;
+      background: #231221;
       border-radius: 3px;
     }
     ::-webkit-scrollbar-thumb:hover {
-      background: #7DD3FC;
+      background: #FF66B2;
     }
   </style>
 </head>
@@ -176,32 +176,32 @@
   <!-- Camada de Ruído Tátil Orgânico -->
   <div class="grain-layer"></div>
 
-  <!-- Glows de Fundo Estratégicos em Azul Bebê -->
+  <!-- Glows de Fundo Estratégicos em Rosa Choque Claro -->
   <div class="fixed inset-0 glow-spot-ambient pointer-events-none z-0"></div>
   <div class="fixed inset-0 glow-spot-bottom pointer-events-none z-0"></div>
 
-  <!-- Canvas Interativo de Rede Neural & Ondas em Azul Bebê ao Mexer o Mouse -->
+  <!-- Canvas Interativo de Rede Neural & Ondas em Rosa Choque Claro ao Mexer o Mouse -->
   <canvas id="kinetic-canvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
-  <!-- ==================== HEADER (ASSIMÉTRICO & EDITORIAL EM AZUL BEBÊ) ==================== -->
+  <!-- ==================== HEADER (ASSIMÉTRICO & EDITORIAL EM ROSA CHOQUE CLARO) ==================== -->
   <header class="border-b border-noir-800/80 sticky top-0 bg-noir-950/85 backdrop-blur-xl z-40 px-6 sm:px-12 py-4">
-    <div class="max-w-7xl mx-auto flex items-center justify-between font-mono text-xs text-baby-dim">
+    <div class="max-w-7xl mx-auto flex items-center justify-between font-mono text-xs text-shock-dim">
       
       <!-- Lado Esquerdo: Identificação Autoral -->
       <div class="flex items-center gap-3">
-        <a href="#" class="text-white hover:text-baby-200 transition-colors font-medium flex items-center gap-2">
-          <span class="w-2 h-2 rounded-full bg-baby-300 shadow-[0_0_8px_rgba(125,211,252,0.9)]"></span>
+        <a href="#" class="text-white hover:text-shock-200 transition-colors font-medium flex items-center gap-2">
+          <span class="w-2 h-2 rounded-full bg-shock-400 shadow-[0_0_8px_rgba(255,102,178,0.9)]"></span>
           <span class="text-sm font-semibold tracking-tight text-white">Luiz Araujo</span>
         </a>
-        <span class="hidden sm:inline text-baby-500/40">/</span>
-        <span class="hidden sm:inline text-[11px] text-baby-300/80">UFPR • IA & Software</span>
+        <span class="hidden sm:inline text-shock-500/40">/</span>
+        <span class="hidden sm:inline text-[11px] text-shock-300/80">UFPR • IA & Software</span>
       </div>
 
       <!-- Lado Direito: Navegação Editorial -->
       <nav class="flex items-center gap-7">
-        <a href="#sobre" class="hover:text-baby-200 transition-colors text-baby-muted">[01/SOBRE]</a>
-        <a href="#projetos" class="hover:text-baby-200 transition-colors text-baby-muted">[02/CASOS]</a>
-        <a href="#contato" class="text-baby-200 hover:text-white transition-colors flex items-center gap-1">
+        <a href="#sobre" class="hover:text-shock-200 transition-colors text-shock-muted">[01/SOBRE]</a>
+        <a href="#projetos" class="hover:text-shock-200 transition-colors text-shock-muted">[02/CASOS]</a>
+        <a href="#contato" class="text-shock-200 hover:text-white transition-colors flex items-center gap-1">
           <span>[03/CONTATO]</span>
           <span>↗</span>
         </a>
@@ -217,14 +217,14 @@
     <section class="space-y-12">
       
       <!-- Linha de Metadados Editoriais -->
-      <div class="flex flex-wrap items-baseline justify-between gap-4 font-mono text-xs text-baby-muted border-b border-noir-800 pb-4">
-        <span class="text-baby-300 font-medium tracking-widest uppercase">DISCIPLINA // COMPUTAÇÃO & ARTE</span>
-        <span class="text-[11px] text-baby-400/60">UFPR CAMPUS JANDAIA DO SUL · PARANÁ, BRASIL</span>
+      <div class="flex flex-wrap items-baseline justify-between gap-4 font-mono text-xs text-shock-muted border-b border-noir-800 pb-4">
+        <span class="text-shock-300 font-medium tracking-widest uppercase">DISCIPLINA // COMPUTAÇÃO & ARTE</span>
+        <span class="text-[11px] text-shock-400/60">UFPR CAMPUS JANDAIA DO SUL · PARANÁ, BRASIL</span>
       </div>
 
       <!-- H1 TITÂNICO COM RECUO NÃO-CONVENCIONAL (QUEBRA DE CENTRALIZAÇÃO) -->
       <div class="relative">
-        <h1 class="text-7xl sm:text-9xl md:text-[10.5rem] lg:text-[13rem] font-bold tracking-tighter leading-[0.8] text-baby-gradient select-none">
+        <h1 class="text-7xl sm:text-9xl md:text-[10.5rem] lg:text-[13rem] font-bold tracking-tighter leading-[0.8] text-shock-gradient select-none">
           Luiz<br />
           <span class="pl-6 sm:pl-20 md:pl-36 inline-block">Araujo.</span>
         </h1>
@@ -236,18 +236,18 @@
         <!-- Bloco de Texto Principal (60% da Tela - col-span-7) -->
         <div class="md:col-span-7 space-y-5">
           <h2 class="text-2xl sm:text-3xl font-light text-white tracking-tight leading-snug">
-            Engenharia de Software & <span class="text-baby-200 font-semibold underline decoration-baby-300/40 decoration-1 underline-offset-8">Inteligência Artificial</span>.
+            Engenharia de Software & <span class="text-shock-200 font-semibold underline decoration-shock-400/40 decoration-1 underline-offset-8">Inteligência Artificial</span>.
           </h2>
-          <p class="text-sm sm:text-base text-baby-muted font-light leading-relaxed max-w-xl">
+          <p class="text-sm sm:text-base text-shock-muted font-light leading-relaxed max-w-xl">
             Construção de sistemas com alto apelo estético, performance extrema e rigor matemático. A união da fundamentação teórica da Universidade Federal do Paraná com design editorial e tecnologia de ponta.
           </p>
 
           <div class="pt-2 flex items-center gap-4 font-mono text-xs">
-            <a href="#projetos" class="px-5 py-2.5 rounded border border-baby-300/40 bg-baby-100 text-slate-950 font-semibold hover:bg-white transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(186,230,253,0.3)]">
+            <a href="#projetos" class="px-5 py-2.5 rounded border border-shock-300/40 bg-shock-100 text-slate-950 font-semibold hover:bg-white transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(255,102,178,0.3)]">
               <span>Explorar Casos</span>
               <span>↓</span>
             </a>
-            <a href="#contato" class="px-5 py-2.5 rounded border border-baby-400/25 hover:border-baby-300 text-baby-100 transition-colors">
+            <a href="#contato" class="px-5 py-2.5 rounded border border-shock-400/25 hover:border-shock-300 text-shock-100 transition-colors">
               <span>Iniciar Diálogo ↗</span>
             </a>
           </div>
@@ -255,22 +255,22 @@
 
         <!-- Bloco Flutuante Sobreposto (40% da Tela - col-span-5) com Margem Negativa -->
         <div class="md:col-span-5 md:-mt-10 z-20">
-          <div class="border-baby-1px rounded-xl p-6 bg-noir-900/90 backdrop-blur-2xl space-y-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
-            <div class="flex items-center justify-between font-mono text-[11px] text-baby-dim pb-3 border-b border-noir-800">
-              <span class="text-baby-200 font-medium flex items-center gap-2">
-                <span class="w-1.5 h-1.5 rounded-full bg-baby-300 shadow-[0_0_6px_rgba(125,211,252,0.8)]"></span> UFPR · Curadoria
+          <div class="border-shock-1px rounded-xl p-6 bg-noir-900/90 backdrop-blur-2xl space-y-4 shadow-[0_20px_50px_rgba(0,0,0,0.8)]">
+            <div class="flex items-center justify-between font-mono text-[11px] text-shock-dim pb-3 border-b border-noir-800">
+              <span class="text-shock-200 font-medium flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-shock-400 shadow-[0_0_6px_rgba(255,102,178,0.8)]"></span> UFPR · Curadoria
               </span>
               <span>2026</span>
             </div>
             
-            <p class="text-xs text-baby-muted font-light leading-relaxed">
+            <p class="text-xs text-shock-muted font-light leading-relaxed">
               O design não é mero invólucro decorativo; é a expressão visual da clareza arquitetural de um sistema. Menos componentes genéricos, mais precisão tipográfica.
             </p>
 
-            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-[10px] text-baby-300">
-              <span class="px-2 py-0.5 rounded border border-baby-400/20 bg-baby-500/10">Big-O Optimization</span>
-              <span class="px-2 py-0.5 rounded border border-baby-400/20 bg-baby-500/10">Clean Code</span>
-              <span class="px-2 py-0.5 rounded border border-baby-400/20 bg-baby-500/10">Mobile-First</span>
+            <div class="pt-2 flex flex-wrap gap-1.5 font-mono text-[10px] text-shock-300">
+              <span class="px-2 py-0.5 rounded border border-shock-400/20 bg-shock-500/10">Big-O Optimization</span>
+              <span class="px-2 py-0.5 rounded border border-shock-400/20 bg-shock-500/10">Clean Code</span>
+              <span class="px-2 py-0.5 rounded border border-shock-400/20 bg-shock-500/10">Mobile-First</span>
             </div>
           </div>
         </div>
@@ -282,12 +282,12 @@
     <!-- ==================== 2. SOBRE MIM (ORGANIZAÇÃO ASSIMÉTRICA HUMANA) ==================== -->
     <section id="sobre" class="border-t border-noir-800 pt-16 space-y-8">
       
-      <div class="flex items-center justify-between font-mono text-xs text-baby-muted">
-        <span class="text-baby-300 tracking-widest uppercase flex items-center gap-2">
-          <span class="w-1.5 h-1.5 bg-baby-300"></span>
+      <div class="flex items-center justify-between font-mono text-xs text-shock-muted">
+        <span class="text-shock-300 tracking-widest uppercase flex items-center gap-2">
+          <span class="w-1.5 h-1.5 bg-shock-400"></span>
           01 // MANIFESTO & FORMAÇÃO
         </span>
-        <span class="text-[11px] text-baby-400/60">BACHARELADO UFPR</span>
+        <span class="text-[11px] text-shock-400/60">BACHARELADO UFPR</span>
       </div>
 
       <!-- Layout Assimétrico 65% / 35% -->
@@ -296,29 +296,29 @@
         <!-- 65% da Tela (col-span-8) -->
         <div class="md:col-span-8 space-y-6">
           <p class="text-2xl sm:text-4xl text-white font-light leading-tight tracking-tight">
-            Não desenho telas por convenção. Estruturo sistemas com foco em <span class="font-normal text-baby-200 underline decoration-baby-300/30 underline-offset-8">escalabilidade real</span>, código sustentável e arquitetura sem concessões.
+            Não desenho telas por convenção. Estruturo sistemas com foco em <span class="font-normal text-shock-200 underline decoration-shock-400/30 underline-offset-8">escalabilidade real</span>, código sustentável e arquitetura sem concessões.
           </p>
-          <p class="text-sm sm:text-base text-baby-muted font-light leading-relaxed max-w-2xl">
+          <p class="text-sm sm:text-base text-shock-muted font-light leading-relaxed max-w-2xl">
             A formação rigorosa em Inteligência Artificial e Engenharia de Software na Universidade Federal do Paraná me proporciona a base analítica necessária para projetar desde algoritmos de alta eficiência até interfaces web autorais que se recusam a parecer templates pré-fabricados.
           </p>
         </div>
 
         <!-- 35% da Tela (col-span-4) com Coluna Editorial Deslocada -->
         <div class="md:col-span-4 border-l border-noir-800 pl-6 sm:pl-8 space-y-4 font-mono text-xs">
-          <span class="text-baby-400/60 uppercase tracking-wider block text-[10px]">Pilares de Execução</span>
+          <span class="text-shock-400/60 uppercase tracking-wider block text-[10px]">Pilares de Execução</span>
           
-          <div class="space-y-4 text-baby-200">
+          <div class="space-y-4 text-shock-200">
             <div>
               <span class="text-white block font-medium">01. Algoritmos Puros</span>
-              <span class="text-baby-muted text-[11px]">Complexidade Big-O controlada e latência zero.</span>
+              <span class="text-shock-muted text-[11px]">Complexidade Big-O controlada e latência zero.</span>
             </div>
             <div>
               <span class="text-white block font-medium">02. Arquitetura Modular</span>
-              <span class="text-baby-muted text-[11px]">Sistemas desacoplados, testados e legíveis.</span>
+              <span class="text-shock-muted text-[11px]">Sistemas desacoplados, testados e legíveis.</span>
             </div>
             <div>
               <span class="text-white block font-medium">03. UI/UX Awwwards</span>
-              <span class="text-baby-muted text-[11px]">Direção de arte editorial e tipografia marcante.</span>
+              <span class="text-shock-muted text-[11px]">Direção de arte editorial e tipografia marcante.</span>
             </div>
           </div>
         </div>
@@ -330,12 +330,12 @@
     <!-- ==================== 3. ESTUDOS DE CASO (IMERSIVOS, ALTERNADOS & 60/40) ==================== -->
     <section id="projetos" class="border-t border-noir-800 pt-16 space-y-28">
       
-      <div class="flex items-baseline justify-between font-mono text-xs text-baby-muted border-b border-noir-800 pb-4">
-        <span class="text-baby-300 tracking-widest uppercase flex items-center gap-2">
-          <span class="w-1.5 h-1.5 bg-baby-300"></span>
+      <div class="flex items-baseline justify-between font-mono text-xs text-shock-muted border-b border-noir-800 pb-4">
+        <span class="text-shock-300 tracking-widest uppercase flex items-center gap-2">
+          <span class="w-1.5 h-1.5 bg-shock-400"></span>
           02 // ESTUDOS DE CASO EM PRODUÇÃO
         </span>
-        <span class="text-baby-400/60">ESTRITA SELEÇÃO · 2 PROJETOS</span>
+        <span class="text-shock-400/60">ESTRITA SELEÇÃO · 2 PROJETOS</span>
       </div>
 
       <!-- ================= ESTUDO DE CASO 01: AGÊNCIA YELLOW (60% TEXTO À ESQUERDA / 40% VIEWPORT À DIREITA) ================= -->
@@ -344,11 +344,11 @@
         <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
           
           <!-- Coluna Esquerda: Texto e Manifesto (60% da Tela - col-span-7) -->
-          <div class="md:col-span-7 flex flex-col justify-between space-y-6 border-baby-1px rounded-xl p-8 sm:p-10 bg-noir-900/60 backdrop-blur-xl">
+          <div class="md:col-span-7 flex flex-col justify-between space-y-6 border-shock-1px rounded-xl p-8 sm:p-10 bg-noir-900/60 backdrop-blur-xl">
             
             <div class="space-y-4">
-              <div class="flex items-center justify-between font-mono text-xs text-baby-dim">
-                <span class="text-baby-300 font-medium">[ CASO 01 // PLATAFORMA COMERCIAL ]</span>
+              <div class="flex items-center justify-between font-mono text-xs text-shock-dim">
+                <span class="text-shock-300 font-medium">[ CASO 01 // PLATAFORMA COMERCIAL ]</span>
                 <span>2026</span>
               </div>
 
@@ -356,25 +356,25 @@
                 Agência Yellow
               </h3>
 
-              <p class="text-base sm:text-lg text-baby-200 font-light leading-relaxed">
+              <p class="text-base sm:text-lg text-shock-200 font-light leading-relaxed">
                 Landing Page de alta conversão, com design focado em posicionamento estratégico, interatividade e estética premium.
               </p>
 
-              <p class="text-xs sm:text-sm text-baby-muted font-light leading-relaxed">
+              <p class="text-xs sm:text-sm text-shock-muted font-light leading-relaxed">
                 Projetada para quebrar os modelos corporativos engessados, estruturada com narrativa visual contínua, microinterações fluidas em JavaScript nativo e otimização total de carregamento em dispositivos móveis.
               </p>
             </div>
 
             <!-- Tags e Ação -->
             <div class="space-y-5 pt-4 border-t border-noir-800">
-              <div class="flex flex-wrap gap-2 font-mono text-[11px] text-baby-300">
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Growth UI</span>
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Design System</span>
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Alta Conversão</span>
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Mobile-First</span>
+              <div class="flex flex-wrap gap-2 font-mono text-[11px] text-shock-300">
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Growth UI</span>
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Design System</span>
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Alta Conversão</span>
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Mobile-First</span>
               </div>
 
-              <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-5 py-2.5 rounded border border-baby-300/30 bg-baby-400/10 hover:bg-baby-300 hover:text-black text-baby-100 font-mono text-xs font-medium transition-all duration-200">
+              <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-5 py-2.5 rounded border border-shock-300/30 bg-shock-400/10 hover:bg-shock-400 hover:text-black text-shock-100 font-mono text-xs font-medium transition-all duration-200">
                 <span>Inspecionar Projeto Live</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
@@ -384,38 +384,38 @@
 
           <!-- Coluna Direita: Viewport Interativo com Sobreposição (40% da Tela - col-span-5) -->
           <div class="md:col-span-5 flex flex-col justify-center relative md:-ml-8 md:my-6 z-20">
-            <div class="border-baby-1px rounded-xl p-6 sm:p-7 bg-noir-850 shadow-[0_25px_60px_rgba(0,0,0,0.9)] space-y-5">
+            <div class="border-shock-1px rounded-xl p-6 sm:p-7 bg-noir-850 shadow-[0_25px_60px_rgba(0,0,0,0.9)] space-y-5">
               
               <!-- Barra de Navegador Estilizada -->
               <div class="flex items-center justify-between pb-3 border-b border-noir-800 font-mono text-[11px]">
-                <div class="flex items-center gap-2 text-baby-200">
-                  <span class="w-2.5 h-2.5 rounded-full bg-baby-400 shadow-[0_0_6px_rgba(56,189,248,0.7)]"></span>
+                <div class="flex items-center gap-2 text-shock-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-shock-400 shadow-[0_0_6px_rgba(255,102,178,0.7)]"></span>
                   <span>agencia-yellow.vercel.app</span>
                 </div>
-                <span class="text-baby-400/60">PROD</span>
+                <span class="text-shock-400/60">PROD</span>
               </div>
 
               <!-- Destaques Arquiteturais -->
               <div class="space-y-3 font-mono text-xs">
                 <div class="flex justify-between pb-2 border-b border-noir-800/60">
-                  <span class="text-baby-muted">Responsividade</span>
-                  <span class="text-baby-100">Mobile-First 100%</span>
+                  <span class="text-shock-muted">Responsividade</span>
+                  <span class="text-shock-100">Mobile-First 100%</span>
                 </div>
                 <div class="flex justify-between pb-2 border-b border-noir-800/60">
-                  <span class="text-baby-muted">Arquitetura</span>
-                  <span class="text-baby-100">Nativa & Sem Bloat</span>
+                  <span class="text-shock-muted">Arquitetura</span>
+                  <span class="text-shock-100">Nativa & Sem Bloat</span>
                 </div>
                 <div class="flex justify-between pb-2 border-b border-noir-800/60">
-                  <span class="text-baby-muted">Interatividade</span>
-                  <span class="text-baby-100">Micro-animações</span>
+                  <span class="text-shock-muted">Interatividade</span>
+                  <span class="text-shock-100">Micro-animações</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-baby-muted">Deploy</span>
-                  <span class="text-baby-100">Vercel Edge</span>
+                  <span class="text-shock-muted">Deploy</span>
+                  <span class="text-shock-100">Vercel Edge</span>
                 </div>
               </div>
 
-              <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-2 rounded bg-black/60 border border-baby-400/30 text-xs font-mono text-baby-200 hover:text-white hover:border-baby-300 transition-colors">
+              <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-2 rounded bg-black/60 border border-shock-400/30 text-xs font-mono text-shock-200 hover:text-white hover:border-shock-300 transition-colors">
                 Abrir URL Oficial ↗
               </a>
 
@@ -433,38 +433,38 @@
           
           <!-- Coluna Esquerda: Viewport Arquitetônico (40% da Tela - col-span-5) com Sobreposição -->
           <div class="md:col-span-5 flex flex-col justify-center relative md:-mr-8 md:my-6 z-20 order-2 md:order-1">
-            <div class="border-baby-1px rounded-xl p-6 sm:p-7 bg-noir-850 shadow-[0_25px_60px_rgba(0,0,0,0.9)] space-y-5">
+            <div class="border-shock-1px rounded-xl p-6 sm:p-7 bg-noir-850 shadow-[0_25px_60px_rgba(0,0,0,0.9)] space-y-5">
               
               <!-- Barra de Navegador Estilizada -->
               <div class="flex items-center justify-between pb-3 border-b border-noir-800 font-mono text-[11px]">
-                <div class="flex items-center gap-2 text-baby-200">
-                  <span class="w-2.5 h-2.5 rounded-full bg-baby-400 shadow-[0_0_6px_rgba(56,189,248,0.7)]"></span>
+                <div class="flex items-center gap-2 text-shock-200">
+                  <span class="w-2.5 h-2.5 rounded-full bg-shock-400 shadow-[0_0_6px_rgba(255,102,178,0.7)]"></span>
                   <span>site-arquitetura-two.vercel.app</span>
                 </div>
-                <span class="text-baby-400/60">LIVE</span>
+                <span class="text-shock-400/60">LIVE</span>
               </div>
 
               <!-- Métricas e Performance -->
               <div class="space-y-3 font-mono text-xs">
                 <div class="flex justify-between pb-2 border-b border-noir-800/60">
-                  <span class="text-baby-muted">Core Web Vitals</span>
-                  <span class="text-baby-100 font-semibold">100 / 100</span>
+                  <span class="text-shock-muted">Core Web Vitals</span>
+                  <span class="text-shock-100 font-semibold">100 / 100</span>
                 </div>
                 <div class="flex justify-between pb-2 border-b border-noir-800/60">
-                  <span class="text-baby-muted">SEO Local</span>
-                  <span class="text-baby-100">Londrina & São Paulo</span>
+                  <span class="text-shock-muted">SEO Local</span>
+                  <span class="text-shock-100">Londrina & São Paulo</span>
                 </div>
                 <div class="flex justify-between pb-2 border-b border-noir-800/60">
-                  <span class="text-baby-muted">Schema.org</span>
-                  <span class="text-baby-100">ArchitecturalService</span>
+                  <span class="text-shock-muted">Schema.org</span>
+                  <span class="text-shock-100">ArchitecturalService</span>
                 </div>
                 <div class="flex justify-between">
-                  <span class="text-baby-muted">Tipografia</span>
-                  <span class="text-baby-100">Editorial Serif/Sans</span>
+                  <span class="text-shock-muted">Tipografia</span>
+                  <span class="text-shock-100">Editorial Serif/Sans</span>
                 </div>
               </div>
 
-              <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-2 rounded bg-black/60 border border-baby-400/30 text-xs font-mono text-baby-200 hover:text-white hover:border-baby-300 transition-colors">
+              <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="block w-full text-center py-2 rounded bg-black/60 border border-shock-400/30 text-xs font-mono text-shock-200 hover:text-white hover:border-shock-300 transition-colors">
                 Abrir URL Oficial ↗
               </a>
 
@@ -472,11 +472,11 @@
           </div>
 
           <!-- Coluna Direita: Texto e Manifesto (60% da Tela - col-span-7) -->
-          <div class="md:col-span-7 flex flex-col justify-between space-y-6 border-baby-1px rounded-xl p-8 sm:p-10 bg-noir-900/60 backdrop-blur-xl order-1 md:order-2">
+          <div class="md:col-span-7 flex flex-col justify-between space-y-6 border-shock-1px rounded-xl p-8 sm:p-10 bg-noir-900/60 backdrop-blur-xl order-1 md:order-2">
             
             <div class="space-y-4">
-              <div class="flex items-center justify-between font-mono text-xs text-baby-dim">
-                <span class="text-baby-300 font-medium">[ CASO 02 // DESIGN CORPORATIVO ]</span>
+              <div class="flex items-center justify-between font-mono text-xs text-shock-dim">
+                <span class="text-shock-300 font-medium">[ CASO 02 // DESIGN CORPORATIVO ]</span>
                 <span>2026</span>
               </div>
 
@@ -484,25 +484,25 @@
                 Carcaça para um site de arquitetura
               </h3>
 
-              <p class="text-base sm:text-lg text-baby-200 font-light leading-relaxed">
+              <p class="text-base sm:text-lg text-shock-200 font-light leading-relaxed">
                 Site corporativo de alto padrão, otimizado para SEO local/GEO, com grid editorial assimétrico focado em exibir projetos arquitetônicos.
               </p>
 
-              <p class="text-xs sm:text-sm text-baby-muted font-light leading-relaxed">
+              <p class="text-xs sm:text-sm text-shock-muted font-light leading-relaxed">
                 Desenvolvido para atender clientes de alto padrão em Londrina-PR e São Paulo-SP. Cada detalhe foi calibrado para refletir o rigor do estúdio: tipografia elegante, carregamento instantâneo e marcação de microdados para rankeamento orgânico.
               </p>
             </div>
 
             <!-- Tags e Ação -->
             <div class="space-y-5 pt-4 border-t border-noir-800">
-              <div class="flex flex-wrap gap-2 font-mono text-[11px] text-baby-300">
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Editorial Luxo</span>
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">SEO Local (PR/SP)</span>
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Core Web Vitals 100</span>
-                <span class="px-2.5 py-1 rounded bg-black/60 border border-baby-400/20">Tailwind CSS</span>
+              <div class="flex flex-wrap gap-2 font-mono text-[11px] text-shock-300">
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Editorial Luxo</span>
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">SEO Local (PR/SP)</span>
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Core Web Vitals 100</span>
+                <span class="px-2.5 py-1 rounded bg-black/60 border border-shock-400/20">Tailwind CSS</span>
               </div>
 
-              <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-5 py-2.5 rounded border border-baby-300/30 bg-baby-400/10 hover:bg-baby-300 hover:text-black text-baby-100 font-mono text-xs font-medium transition-all duration-200">
+              <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-3 px-5 py-2.5 rounded border border-shock-300/30 bg-shock-400/10 hover:bg-shock-400 hover:text-black text-shock-100 font-mono text-xs font-medium transition-all duration-200">
                 <span>Inspecionar Projeto Live</span>
                 <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
               </a>
@@ -519,12 +519,12 @@
     <!-- ==================== 4. CONTATO (COMPOSIÇÃO ASSIMÉTRICA HUMANA) ==================== -->
     <section id="contato" class="border-t border-noir-800 pt-16 space-y-8">
       
-      <div class="flex items-center justify-between font-mono text-xs text-baby-muted">
-        <span class="text-baby-300 tracking-widest uppercase flex items-center gap-2">
-          <span class="w-1.5 h-1.5 bg-baby-300"></span>
+      <div class="flex items-center justify-between font-mono text-xs text-shock-muted">
+        <span class="text-shock-300 tracking-widest uppercase flex items-center gap-2">
+          <span class="w-1.5 h-1.5 bg-shock-400"></span>
           03 // CONTATO & REDE OFICIAL
         </span>
-        <span class="text-baby-400/60">PARANÁ · BRASIL</span>
+        <span class="text-shock-400/60">PARANÁ · BRASIL</span>
       </div>
 
       <!-- Grid Assimétrico 60% / 40% -->
@@ -535,19 +535,19 @@
           <h2 class="text-4xl sm:text-6xl font-bold tracking-tight text-white font-heading">
             Iniciar diálogo.
           </h2>
-          <p class="text-sm sm:text-base text-baby-muted font-light leading-relaxed max-w-lg">
+          <p class="text-sm sm:text-base text-shock-muted font-light leading-relaxed max-w-lg">
             Disponível para projetos sob medida, pesquisa acadêmica em Inteligência Artificial e desenvolvimento front-end autoral.
           </p>
 
           <!-- E-mail Direto com Cópia Instantânea -->
-          <div class="border-baby-1px rounded-lg p-4 bg-noir-900/70 backdrop-blur-xl flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
+          <div class="border-shock-1px rounded-lg p-4 bg-noir-900/70 backdrop-blur-xl flex flex-wrap items-center justify-between gap-3 font-mono text-xs">
             <div class="flex items-center gap-2.5">
-              <span class="text-baby-400/60">e-mail:</span>
-              <a href="mailto:araujo.luiz@ufpr.br" class="text-baby-200 hover:text-white hover:underline font-medium">
+              <span class="text-shock-400/60">e-mail:</span>
+              <a href="mailto:araujo.luiz@ufpr.br" class="text-shock-200 hover:text-white hover:underline font-medium">
                 araujo.luiz@ufpr.br
               </a>
             </div>
-            <button id="copy-btn-author" class="px-3 py-1 rounded border border-baby-300/30 hover:border-baby-300 hover:bg-baby-300 hover:text-black text-baby-100 transition-colors">
+            <button id="copy-btn-author" class="px-3 py-1 rounded border border-shock-300/30 hover:border-shock-300 hover:bg-shock-400 hover:text-black text-shock-100 transition-colors">
               Copiar
             </button>
           </div>
@@ -557,27 +557,27 @@
         <div class="md:col-span-5 space-y-2.5 font-mono text-xs">
           
           <!-- WhatsApp -->
-          <a href="https://wa.me/5543991824157?text=Ol%C3%A1%20Luiz,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="border-baby-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-baby-300 hover:text-black group transition-all duration-200 flex items-center justify-between block">
-            <span class="text-baby-400/60 group-hover:text-slate-900">whatsapp:</span>
-            <span class="text-baby-200 group-hover:text-black font-semibold">+55 (43) 99182-4157 ↗</span>
+          <a href="https://wa.me/5543991824157?text=Ol%C3%A1%20Luiz,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="border-shock-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-shock-400 hover:text-black group transition-all duration-200 flex items-center justify-between block">
+            <span class="text-shock-400/60 group-hover:text-slate-900">whatsapp:</span>
+            <span class="text-shock-200 group-hover:text-black font-semibold">+55 (43) 99182-4157 ↗</span>
           </a>
 
           <!-- LinkedIn -->
-          <a href="https://www.linkedin.com/in/luiz-augusto-araujo/" target="_blank" rel="noopener noreferrer" class="border-baby-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-baby-300 hover:text-black group transition-all duration-200 flex items-center justify-between block">
-            <span class="text-baby-400/60 group-hover:text-slate-900">linkedin:</span>
-            <span class="text-baby-200 group-hover:text-black font-semibold">Luiz Augusto Araujo ↗</span>
+          <a href="https://www.linkedin.com/in/luiz-augusto-araujo/" target="_blank" rel="noopener noreferrer" class="border-shock-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-shock-400 hover:text-black group transition-all duration-200 flex items-center justify-between block">
+            <span class="text-shock-400/60 group-hover:text-slate-900">linkedin:</span>
+            <span class="text-shock-200 group-hover:text-black font-semibold">Luiz Augusto Araujo ↗</span>
           </a>
 
           <!-- GitHub -->
-          <a href="https://github.com/LA-Marques" target="_blank" rel="noopener noreferrer" class="border-baby-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-baby-300 hover:text-black group transition-all duration-200 flex items-center justify-between block">
-            <span class="text-baby-400/60 group-hover:text-slate-900">github:</span>
-            <span class="text-baby-200 group-hover:text-black font-semibold">LA-Marques ↗</span>
+          <a href="https://github.com/LA-Marques" target="_blank" rel="noopener noreferrer" class="border-shock-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-shock-400 hover:text-black group transition-all duration-200 flex items-center justify-between block">
+            <span class="text-shock-400/60 group-hover:text-slate-900">github:</span>
+            <span class="text-shock-200 group-hover:text-black font-semibold">LA-Marques ↗</span>
           </a>
 
           <!-- Instagram -->
-          <a href="https://instagram.com/luizin.ag" target="_blank" rel="noopener noreferrer" class="border-baby-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-baby-300 hover:text-black group transition-all duration-200 flex items-center justify-between block">
-            <span class="text-baby-400/60 group-hover:text-slate-900">instagram:</span>
-            <span class="text-baby-200 group-hover:text-black font-semibold">@luizin.ag ↗</span>
+          <a href="https://instagram.com/luizin.ag" target="_blank" rel="noopener noreferrer" class="border-shock-1px rounded-lg p-3.5 bg-noir-900/60 hover:bg-shock-400 hover:text-black group transition-all duration-200 flex items-center justify-between block">
+            <span class="text-shock-400/60 group-hover:text-slate-900">instagram:</span>
+            <span class="text-shock-200 group-hover:text-black font-semibold">@luizin.ag ↗</span>
           </a>
 
         </div>
@@ -589,14 +589,14 @@
   </main>
 
   <!-- ==================== FOOTER ==================== -->
-  <footer class="max-w-7xl mx-auto px-6 sm:px-12 py-10 border-t border-noir-800 text-xs font-mono text-baby-dim flex flex-col sm:flex-row items-center justify-between gap-4">
+  <footer class="max-w-7xl mx-auto px-6 sm:px-12 py-10 border-t border-noir-800 text-xs font-mono text-shock-dim flex flex-col sm:flex-row items-center justify-between gap-4">
     <div class="flex items-center gap-2">
-      <span class="w-1.5 h-1.5 bg-baby-300"></span>
-      <span class="text-baby-200">Luiz Araujo</span>
+      <span class="w-1.5 h-1.5 bg-shock-400"></span>
+      <span class="text-shock-200">Luiz Araujo</span>
       <span>·</span>
       <span>Bacharelado em IA & Engenharia de Software</span>
     </div>
-    <div class="flex items-center gap-3 text-baby-400/50">
+    <div class="flex items-center gap-3 text-shock-400/50">
       <span>Universidade Federal do Paraná (UFPR)</span>
       <span>·</span>
       <span>2026</span>
@@ -613,17 +613,17 @@
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText('araujo.luiz@ufpr.br').then(() => {
           copyBtn.innerText = 'Copiado!';
-          copyBtn.classList.add('bg-baby-300', 'text-black');
+          copyBtn.classList.add('bg-shock-400', 'text-black');
           setTimeout(() => {
             copyBtn.innerText = 'Copiar';
-            copyBtn.classList.remove('bg-baby-300', 'text-black');
+            copyBtn.classList.remove('bg-shock-400', 'text-black');
           }, 2000);
         });
       });
     }
 
     // =======================================================
-    // ANIMAÇÃO DE FUNDO EM AZUL BEBÊ: REDE CINÉTICA & NEURAL (60FPS)
+    // ANIMAÇÃO DE FUNDO EM ROSA CHOQUE CLARO: REDE CINÉTICA & NEURAL (60FPS)
     // =======================================================
     const canvas = document.getElementById('kinetic-canvas');
     if (canvas) {
@@ -657,7 +657,7 @@
             y: mouse.y,
             radius: 6,
             maxRadius: 90,
-            alpha: 0.25
+            alpha: 0.28
           });
         }
       });
@@ -689,7 +689,7 @@
       function animate() {
         ctx.clearRect(0, 0, width, height);
 
-        // 1. Ondas do mouse em Azul Bebê
+        // 1. Ondas do mouse em Rosa Choque Claro
         for (let i = ripples.length - 1; i >= 0; i--) {
           const r = ripples[i];
           r.radius += 1.8;
@@ -697,7 +697,7 @@
 
           ctx.beginPath();
           ctx.arc(r.x, r.y, r.radius, 0, Math.PI * 2);
-          ctx.strokeStyle = `rgba(186, 230, 253, ${r.alpha * 0.45})`;
+          ctx.strokeStyle = `rgba(255, 102, 178, ${r.alpha * 0.5})`;
           ctx.lineWidth = 0.9;
           ctx.stroke();
 
@@ -706,7 +706,7 @@
           }
         }
 
-        // 2. Partículas e filamentos em Azul Bebê
+        // 2. Partículas e filamentos em Rosa Choque Claro
         for (let i = 0; i < particles.length; i++) {
           const p = particles[i];
 
@@ -727,23 +727,23 @@
               p.x += Math.cos(angle) * force * 1.3;
               p.y += Math.sin(angle) * force * 1.3;
 
-              const lineAlpha = (1 - dist / mouse.radius) * 0.35;
+              const lineAlpha = (1 - dist / mouse.radius) * 0.38;
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(mouse.x, mouse.y);
-              ctx.strokeStyle = `rgba(186, 230, 253, ${lineAlpha})`;
+              ctx.strokeStyle = `rgba(255, 153, 204, ${lineAlpha})`;
               ctx.lineWidth = 0.8;
               ctx.stroke();
             }
           }
 
-          // Ponto em Azul Bebê suave
+          // Ponto em Rosa Choque Claro suave
           ctx.beginPath();
           ctx.arc(p.x, p.y, p.baseRadius, 0, Math.PI * 2);
-          ctx.fillStyle = `rgba(186, 230, 253, ${p.alpha})`;
+          ctx.fillStyle = `rgba(255, 179, 217, ${p.alpha})`;
           ctx.fill();
 
-          // Filamentos entre partículas vizinhas em Azul Bebê
+          // Filamentos entre partículas vizinhas em Rosa Choque Claro
           for (let j = i + 1; j < particles.length; j++) {
             const p2 = particles[j];
             const dx = p.x - p2.x;
@@ -751,11 +751,11 @@
             const dist = Math.sqrt(dx * dx + dy * dy);
 
             if (dist < 115) {
-              const lineAlpha = (1 - dist / 115) * 0.16;
+              const lineAlpha = (1 - dist / 115) * 0.18;
               ctx.beginPath();
               ctx.moveTo(p.x, p.y);
               ctx.lineTo(p2.x, p2.y);
-              ctx.strokeStyle = `rgba(125, 211, 252, ${lineAlpha})`;
+              ctx.strokeStyle = `rgba(255, 102, 178, ${lineAlpha})`;
               ctx.lineWidth = 0.6;
               ctx.stroke();
             }
