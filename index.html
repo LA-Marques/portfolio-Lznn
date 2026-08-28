@@ -4,25 +4,25 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <!-- SEO & Metatags -->
-  <title>Luiz Araujo — IA & Engenharia de Software</title>
-  <meta name="description" content="Luiz Araujo. Bacharelando em Inteligência Artificial e Engenharia de Software na UFPR. Foco em algoritmos, manipulação de dados em Python e alta performance." />
-  <meta name="keywords" content="Luiz Araujo, Inteligência Artificial, Engenharia de Software, UFPR, Paraná, Python, Estruturas de Dados, Algoritmos, Front-end" />
+  <!-- SEO & Metatags de Alta Precisão -->
+  <title>Luiz Araujo — Engenharia de Software & Inteligência Artificial | UFPR</title>
+  <meta name="description" content="Portfólio oficial de Luiz Araujo, estudante de Bacharelado em Inteligência Artificial e Engenharia de Software na UFPR. Foco em algoritmos, manipulação eficiente de dados em Python e desenvolvimento web de alto padrão." />
+  <meta name="keywords" content="Luiz Araujo, Inteligência Artificial, Engenharia de Software, UFPR, Paraná, Jandaia do Sul, Curitiba, Londrina, Python, Estruturas de Dados, Algoritmos, Front-end, Tailwind CSS" />
   <meta name="author" content="Luiz Araujo" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://luizaraujo.dev" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Redes Sociais -->
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="pt_BR" />
-  <meta property="og:title" content="Luiz Araujo — IA & Engenharia de Software" />
-  <meta property="og:description" content="Bacharelando em Inteligência Artificial e Engenharia de Software na UFPR." />
+  <meta property="og:title" content="Luiz Araujo — Engenharia de Software & Inteligência Artificial | UFPR" />
+  <meta property="og:description" content="Construindo sistemas de alto impacto com lógica algorítmica rigorosa e estética moderna." />
   <meta property="og:url" content="https://luizaraujo.dev" />
 
-  <!-- Google Fonts: Inter (Tipografia pura e geométrica) & JetBrains Mono -->
+  <!-- Google Fonts: Space Grotesk (Títulos Awwwards), Inter (Leitura Pura) & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -31,16 +31,23 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            heading: ['"Space Grotesk"', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
             mono: ['"JetBrains Mono"', 'monospace'],
           },
           colors: {
-            dark: {
-              bg: '#0A0A0A',
-              subtle: '#141414',
-              border: '#222222',
-              muted: '#71717A',
-              text: '#EDEDED',
+            brand: {
+              black: '#06070B',
+              surface: '#0C0E17',
+              card: 'rgba(14, 17, 28, 0.72)',
+              border: 'rgba(255, 255, 255, 0.08)',
+              'border-hover': 'rgba(0, 240, 255, 0.35)',
+              cyan: '#00F0FF',
+              'cyan-dim': 'rgba(0, 240, 255, 0.12)',
+              emerald: '#10B981',
+              'emerald-dim': 'rgba(16, 185, 129, 0.12)',
+              muted: '#94A3B8',
+              subtle: '#64748B',
             }
           }
         }
@@ -51,7 +58,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Schema.org JSON-LD (SEO & GEO) -->
+  <!-- Schema.org GEO & Identidade Acadêmica (JSON-LD) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -61,11 +68,12 @@
         "@id": "https://luizaraujo.dev/#person",
         "name": "Luiz Araujo",
         "jobTitle": "Estudante de Inteligência Artificial e Engenharia de Software",
-        "description": "Bacharelando em Inteligência Artificial e Engenharia de Software na Universidade Federal do Paraná (UFPR). Foco em algoritmos e manipulação de dados.",
+        "description": "Bacharelando em Inteligência Artificial e Engenharia de Software na Universidade Federal do Paraná (UFPR). Foco em algoritmos, manipulação eficiente de dados em Python e desenvolvimento web moderno.",
         "alumniOf": {
           "@type": "CollegeOrUniversity",
           "name": "Universidade Federal do Paraná",
-          "alternateName": "UFPR"
+          "alternateName": "UFPR",
+          "url": "https://www.ufpr.br"
         },
         "address": {
           "@type": "PostalAddress",
@@ -85,7 +93,10 @@
         "@type": "WebSite",
         "@id": "https://luizaraujo.dev/#website",
         "url": "https://luizaraujo.dev",
-        "name": "Luiz Araujo",
+        "name": "Luiz Araujo — Portfólio",
+        "publisher": {
+          "@id": "https://luizaraujo.dev/#person"
+        },
         "inLanguage": "pt-BR"
       }
     ]
@@ -94,229 +105,569 @@
 
   <style>
     body {
-      background-color: #0A0A0A;
-      color: #EDEDED;
+      background-color: #06070B;
+      color: #F1F5F9;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
     ::selection {
-      background-color: #27272A;
-      color: #FFFFFF;
+      background-color: rgba(0, 240, 255, 0.25);
+      color: #00F0FF;
     }
     ::-webkit-scrollbar {
-      width: 5px;
+      width: 6px;
     }
     ::-webkit-scrollbar-track {
-      background: #0A0A0A;
+      background: #06070B;
     }
     ::-webkit-scrollbar-thumb {
-      background: #262626;
+      background: #1E2333;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #00F0FF;
+    }
+
+    /* Iluminação atmosférica radial (Estilo Awwwards) */
+    .glow-cyan-top {
+      background: radial-gradient(circle 500px at 50% -10%, rgba(0, 240, 255, 0.12), transparent 75%);
+    }
+    .glow-indigo-middle {
+      background: radial-gradient(circle 600px at 80% 40%, rgba(99, 102, 241, 0.08), transparent 75%);
+    }
+    .glow-emerald-bottom {
+      background: radial-gradient(circle 500px at 20% 85%, rgba(16, 185, 129, 0.08), transparent 75%);
+    }
+
+    /* Grid técnico sutil */
+    .bg-grid-tech {
+      background-size: 40px 40px;
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
     }
   </style>
 </head>
 
-<body class="min-h-screen font-sans antialiased text-zinc-300">
+<body class="min-h-screen relative overflow-x-hidden">
 
-  <!-- Container de Coluna Única com Largura Máxima Reduzida (Ultra-Minimalista) -->
-  <div class="max-w-2xl mx-auto px-6 py-16 sm:py-24 space-y-16">
+  <!-- Luzes de Profundidade Atmosférica (Awwwards Style) -->
+  <div class="fixed inset-0 bg-grid-tech pointer-events-none z-0"></div>
+  <div class="fixed inset-0 glow-cyan-top pointer-events-none z-0"></div>
+  <div class="fixed inset-0 glow-indigo-middle pointer-events-none z-0"></div>
+  <div class="fixed inset-0 glow-emerald-bottom pointer-events-none z-0"></div>
 
-    <!-- ==================== NAVEGAÇÃO ==================== -->
-    <header class="flex items-center justify-between text-xs font-mono text-zinc-500 tracking-tight">
-      <span>luiz araujo</span>
-      <nav class="flex items-center gap-5">
-        <a href="#sobre" class="hover:text-zinc-200 transition-colors">sobre</a>
-        <a href="#projeto" class="hover:text-zinc-200 transition-colors">projeto</a>
-        <a href="#contato" class="hover:text-zinc-200 transition-colors">contato</a>
+  <!-- ==================== HEADER (FLOATING GLASS PILL) ==================== -->
+  <header class="fixed top-0 left-0 right-0 z-50 px-4 sm:px-6 pt-5 pb-3 transition-all duration-300">
+    <div class="max-w-4xl mx-auto">
+      <nav class="flex items-center justify-between px-5 py-2.5 rounded-full bg-brand-surface/70 backdrop-blur-xl border border-brand-border shadow-[0_8px_30px_rgb(0,0,0,0.4)] transition-all hover:border-white/20">
+        
+        <!-- Logo do Desenvolvedor -->
+        <a href="#" class="flex items-center gap-2 group font-mono text-xs tracking-wider">
+          <span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_8px_#00F0FF]"></span>
+          <span class="font-bold text-white group-hover:text-brand-cyan transition-colors">luiz.araujo</span>
+          <span class="text-zinc-500">()</span>
+        </a>
+
+        <!-- Links Rápidos -->
+        <div class="hidden sm:flex items-center gap-6 text-xs font-mono text-zinc-400">
+          <a href="#sobre" class="hover:text-white transition-colors">Sobre</a>
+          <a href="#projetos" class="hover:text-white transition-colors">Projetos</a>
+          <a href="#stack" class="hover:text-white transition-colors">Stack</a>
+          <a href="#contato" class="hover:text-brand-cyan transition-colors">Contato</a>
+        </div>
+
+        <!-- Status Pill UFPR -->
+        <a href="#contato" class="flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] hover:bg-brand-cyan hover:text-black border border-white/10 hover:border-brand-cyan text-xs font-mono transition-all duration-200">
+          <span class="w-1.5 h-1.5 rounded-full bg-brand-emerald animate-pulse"></span>
+          <span class="text-zinc-300 hover:text-black font-medium">Disponível</span>
+        </a>
+
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- ==================== HERO ==================== -->
-    <section class="space-y-4 pt-4">
-      <h1 class="text-3xl sm:text-4xl font-semibold tracking-tight text-white">
-        Luiz Araujo
+  <!-- ==================== CONTEÚDO PRINCIPAL ==================== -->
+  <main class="relative z-10 max-w-4xl mx-auto px-5 sm:px-8 pt-32 sm:pt-40 pb-20 space-y-24">
+
+    <!-- ==================== 1. HERO SECTION ==================== -->
+    <section class="space-y-6">
+      
+      <!-- Tag UFPR de Alto Padrão -->
+      <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.03] border border-white/10 backdrop-blur-md text-xs font-mono text-zinc-300">
+        <span class="w-2 h-2 rounded-full bg-brand-cyan shadow-[0_0_8px_#00F0FF]"></span>
+        <span>UFPR • Inteligência Artificial & Engenharia de Software</span>
+        <span class="text-zinc-600">|</span>
+        <span class="text-zinc-400">Paraná, BR</span>
+      </div>
+
+      <!-- H1 Imponente -->
+      <h1 class="font-heading text-5xl sm:text-7xl md:text-8xl font-bold tracking-tight text-white leading-none">
+        Luiz Araujo<span class="text-brand-cyan">.</span>
       </h1>
-      <p class="text-base sm:text-lg text-zinc-400 font-normal leading-relaxed">
-        Bacharelando em Inteligência Artificial e Engenharia de Software na UFPR.
+
+      <!-- Subtítulo de Impacto Direto -->
+      <h2 class="text-xl sm:text-2xl md:text-3xl font-light text-zinc-300 tracking-tight leading-snug">
+        Engenharia de Software & <span class="font-medium text-white underline decoration-brand-cyan/60 decoration-2 underline-offset-4">Inteligência Artificial</span>.
+      </h2>
+
+      <!-- Frase de Posicionamento -->
+      <p class="text-sm sm:text-base text-zinc-400 max-w-xl font-light leading-relaxed">
+        Construindo sistemas de alto impacto com foco em lógica algorítmica rigorosa, manipulação de dados estruturados e interfaces de alta performance.
       </p>
-      <div class="pt-1 text-xs font-mono text-zinc-500">
-        <span>Paraná, Brasil</span>
-        <span class="mx-2">·</span>
-        <span>UFPR Campus Jandaia do Sul</span>
-      </div>
-    </section>
 
-    <hr class="border-zinc-800/80" />
+      <!-- Ações Imediatas (CTAs com Efeito Awwwards) -->
+      <div class="flex flex-wrap items-center gap-3.5 pt-2">
+        <a href="#projetos" class="group px-6 py-3 rounded-xl bg-brand-cyan text-black font-mono font-semibold text-xs tracking-wider uppercase flex items-center gap-2 transition-all duration-200 hover:shadow-[0_0_25px_rgba(0,240,255,0.4)] hover:-translate-y-0.5">
+          <span>Ver Projetos</span>
+          <i data-lucide="arrow-down-right" class="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:translate-y-0.5"></i>
+        </a>
 
-    <!-- ==================== SOBRE MIM ==================== -->
-    <section id="sobre" class="space-y-3">
-      <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Sobre</h2>
-      <p class="text-sm sm:text-base text-zinc-300 leading-relaxed font-light">
-        Focado na resolução de problemas complexos através de lógica algorítmica rigorosa, estruturas de dados eficientes e código sustentável de alta performance.
-      </p>
-    </section>
-
-    <!-- ==================== PROJETO EM FOCO ==================== -->
-    <section id="projeto" class="space-y-6">
-      <div class="flex items-baseline justify-between">
-        <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Projeto em Destaque</h2>
-        <span class="text-xs font-mono text-zinc-500">Python · Complexidade O(1)</span>
+        <a href="#contato" class="px-5 py-3 rounded-xl bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-brand-cyan/50 text-white font-mono text-xs tracking-wider uppercase flex items-center gap-2 transition-all duration-200">
+          <span>Entrar em Contato</span>
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-zinc-400"></i>
+        </a>
       </div>
 
-      <!-- Card Técnico Minimalista (Sem sombras, borda ultrafina) -->
-      <article class="p-5 rounded-lg border border-zinc-800/90 bg-zinc-900/20 space-y-4">
-        <div>
-          <h3 class="text-base font-medium text-white tracking-tight">
-            Motor de Processamento Estatístico dos Municípios do Paraná
-          </h3>
-          <p class="text-xs font-mono text-zinc-500 mt-0.5">
-            Dados estruturados & ingestão com tabelas hash
+    </section>
+
+    <!-- ==================== 2. SOBRE MIM (DIRETO E ESCANEÁVEL) ==================== -->
+    <section id="sobre" class="space-y-5">
+      <div class="flex items-center gap-2.5 font-mono text-xs text-brand-cyan tracking-widest uppercase">
+        <span class="w-4 h-[1px] bg-brand-cyan"></span>
+        <span>01 // Filosofia & Formação</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
+        
+        <!-- Frases de Impacto -->
+        <div class="md:col-span-8 space-y-4">
+          <p class="text-lg sm:text-xl font-light text-zinc-200 leading-relaxed">
+            Desenvolvo sistemas orientados à <strong class="text-white font-semibold">eficiência algorítmica real</strong>, eliminando o overhead de código dispensável e priorizando arquiteturas sustentáveis.
+          </p>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">
+            Meu embasamento acadêmico no Bacharelado em Inteligência Artificial e Engenharia de Software da <strong class="text-zinc-200 font-medium">Universidade Federal do Paraná (UFPR)</strong> conecta teoria matemática rigorosa (Big-O, grafos, álgebra linear) à construção de produtos web modernos e velozes.
           </p>
         </div>
 
-        <p class="text-xs sm:text-sm text-zinc-400 leading-relaxed font-light">
-          Sistema desenvolvido em Python projetado para ingestão, indexação e agregação estatística de dados socioeconômicos dos 399 municípios do Paraná. Utiliza estruturas baseadas em tabelas hash (dicionários indexados) para consultas e agregação em tempo constante \(O(1)\), eliminando a latência de varreduras lineares em grandes conjuntos de dados locais.
-        </p>
-
-        <!-- Trecho Monospace Técnico de Exemplo -->
-        <div class="p-3 rounded bg-black/60 border border-zinc-800/60 font-mono text-xs text-zinc-400 overflow-x-auto">
-          <div class="text-zinc-600">// Indexação por chave hash IBGE — Tempo de Acesso: O(1)</div>
-          <div class="mt-1 text-zinc-300">
-            municipios = {<span class="text-zinc-100">"4113700"</span>: <span class="text-zinc-400">"Londrina"</span>, <span class="text-zinc-100">"4106902"</span>: <span class="text-zinc-400">"Curitiba"</span>, <span class="text-zinc-100">"4112108"</span>: <span class="text-zinc-400">"Jandaia do Sul"</span>}
+        <!-- Mini Telemetria Card UFPR -->
+        <div class="md:col-span-4 p-4 rounded-2xl bg-brand-card border border-brand-border backdrop-blur-xl space-y-2.5 font-mono text-xs text-zinc-400">
+          <div class="flex items-center justify-between pb-2 border-b border-white/[0.06]">
+            <span class="text-white font-semibold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span> UFPR
+            </span>
+            <span class="text-[10px] text-zinc-500">Polo Federal</span>
           </div>
-          <div class="text-zinc-500 mt-1">latencia_consulta = 0.02ms · overhead_memoria = minimo</div>
+          <div class="text-[11px] space-y-1">
+            <div><span class="text-zinc-500">Curso:</span> <span class="text-zinc-200">IA & Software</span></div>
+            <div><span class="text-zinc-500">Campus:</span> <span class="text-zinc-200">Jandaia do Sul - PR</span></div>
+            <div><span class="text-zinc-500">Foco:</span> <span class="text-brand-emerald">Complexidade O(1) & ML</span></div>
+          </div>
         </div>
-      </article>
 
-      <!-- Outros Trabalhos & Links Diretos Secundários -->
-      <div class="pt-2 space-y-2.5">
-        <span class="text-xs font-mono text-zinc-500 uppercase tracking-wider block">Outros Projetos</span>
-        
-        <ul class="divide-y divide-zinc-800/60 font-mono text-xs">
-          <li class="py-2.5 flex items-center justify-between group">
-            <span class="text-zinc-300">Carcaça para site de arquitetura</span>
-            <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors flex items-center gap-1">
+      </div>
+    </section>
+
+    <!-- ==================== 3. PROJETOS (BENTO GRID REFINADO) ==================== -->
+    <section id="projetos" class="space-y-6">
+      
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-2">
+        <div class="space-y-1.5">
+          <div class="flex items-center gap-2.5 font-mono text-xs text-brand-cyan tracking-widest uppercase">
+            <span class="w-4 h-[1px] bg-brand-cyan"></span>
+            <span>02 // Bento Grid de Projetos</span>
+          </div>
+          <h3 class="font-heading text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Engenharia em Destaque
+          </h3>
+        </div>
+        <span class="text-xs font-mono text-zinc-500">Qualidade > Quantidade</span>
+      </div>
+
+      <!-- Bento Grid Assimétrico -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+
+        <!-- ================= CARD 1 (PRINCIPAL / GRANDE / HERO BENTO): PYTHON DATA ENGINE ================= -->
+        <article class="md:col-span-12 p-6 sm:p-8 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-border-hover transition-all duration-300 backdrop-blur-xl group relative overflow-hidden hover:-translate-y-1 hover:shadow-[0_20px_40px_-15px_rgba(0,240,255,0.15)]">
+          
+          <!-- Brilho Interno no Hover -->
+          <div class="absolute -right-20 -top-20 w-80 h-80 bg-brand-cyan/5 rounded-full blur-3xl pointer-events-none group-hover:bg-brand-cyan/10 transition-all duration-500"></div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center relative z-10">
+            
+            <!-- Descrição Técnica Enxuta -->
+            <div class="lg:col-span-7 space-y-4">
+              
+              <div class="flex items-center gap-2">
+                <span class="px-2.5 py-0.5 rounded-full bg-brand-cyan/10 border border-brand-cyan/30 text-brand-cyan text-[11px] font-mono font-medium">
+                  PROJETO PRINCIPAL // PYTHON & ESTRUTURAS
+                </span>
+                <span class="text-zinc-500 text-xs font-mono">IBGE / PR</span>
+              </div>
+
+              <h4 class="font-heading text-2xl sm:text-3xl font-bold text-white group-hover:text-brand-cyan transition-colors">
+                Motor de Processamento Estatístico dos Municípios do Paraná
+              </h4>
+
+              <p class="text-xs sm:text-sm text-zinc-300 font-light leading-relaxed">
+                Sistema desenvolvido em <strong class="text-white font-medium">Python</strong> projetado para ingestão, indexação e agregação estatística de indicadores socioeconômicos dos 399 municípios do Paraná.
+              </p>
+
+              <p class="text-xs text-zinc-400 font-mono leading-relaxed">
+                Estruturado com <span class="text-zinc-200 font-medium">tabelas hash (dicionários nativos)</span>, garantindo tempo de acesso e cruzamento analítico em complexidade <span class="text-brand-emerald font-semibold">O(1)</span> sem o overhead de varreduras lineares em grandes massas de dados.
+              </p>
+
+              <!-- Tags Técnicas Elegantes -->
+              <div class="flex flex-wrap gap-2 pt-1">
+                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">Python 3.12</span>
+                <span class="px-2.5 py-1 rounded-md bg-brand-cyan/10 border border-brand-cyan/20 text-[11px] font-mono text-brand-cyan">Hash Map O(1)</span>
+                <span class="px-2.5 py-1 rounded-md bg-brand-emerald/10 border border-brand-emerald/20 text-[11px] font-mono text-emerald-400">Dados IBGE</span>
+                <span class="px-2.5 py-1 rounded-md bg-white/[0.04] border border-white/[0.08] text-[11px] font-mono text-zinc-300">Estruturas de Dados</span>
+              </div>
+
+              <!-- Ação de Simulação Interativa -->
+              <div class="pt-2 flex items-center gap-3">
+                <button id="btn-benchmark" class="px-3.5 py-1.5 rounded-lg bg-brand-cyan/20 hover:bg-brand-cyan text-brand-cyan hover:text-black border border-brand-cyan/40 font-mono text-xs font-medium flex items-center gap-2 transition-all">
+                  <i data-lucide="play" class="w-3.5 h-3.5"></i>
+                  <span>Testar Consulta O(1)</span>
+                </button>
+                <span id="benchmark-feedback" class="text-xs font-mono text-zinc-500">Pronto</span>
+              </div>
+
+            </div>
+
+            <!-- Terminal / Visualizador de Dados em Monospace -->
+            <div class="lg:col-span-5">
+              <div class="rounded-xl bg-[#08090E] border border-white/10 shadow-2xl overflow-hidden font-mono text-xs">
+                
+                <div class="flex items-center justify-between px-3.5 py-2 bg-white/[0.02] border-b border-white/[0.06]">
+                  <div class="flex items-center gap-1.5">
+                    <span class="w-2.5 h-2.5 rounded-full bg-rose-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-amber-500/70"></span>
+                    <span class="w-2.5 h-2.5 rounded-full bg-emerald-500/70"></span>
+                    <span class="text-zinc-500 text-[11px] ml-2">parana_hash.py</span>
+                  </div>
+                  <span class="text-[10px] text-brand-cyan font-mono">hash_lookup</span>
+                </div>
+
+                <div class="p-3.5 text-[11px] leading-relaxed space-y-1 text-zinc-300 overflow-x-auto">
+                  <div class="text-zinc-500"># Ingestão indexada por código IBGE</div>
+                  <div>indices_pr: dict = {</div>
+                  <div class="pl-4"><span class="text-brand-cyan">"4113700"</span>: {<span class="text-zinc-400">"cidade"</span>: <span class="text-emerald-400">"Londrina"</span>, <span class="text-zinc-400">"pop"</span>: <span class="text-amber-300">588125</span>},</div>
+                  <div class="pl-4"><span class="text-brand-cyan">"4106902"</span>: {<span class="text-zinc-400">"cidade"</span>: <span class="text-emerald-400">"Curitiba"</span>, <span class="text-zinc-400">"pop"</span>: <span class="text-amber-300">1773733</span>},</div>
+                  <div class="pl-4"><span class="text-brand-cyan">"4112108"</span>: {<span class="text-zinc-400">"cidade"</span>: <span class="text-emerald-400">"Jandaia do Sul"</span>, <span class="text-zinc-400">"ufpr"</span>: <span class="text-purple-400">True</span>},</div>
+                  <div class="pl-4"><span class="text-brand-cyan">"4115200"</span>: {<span class="text-zinc-400">"cidade"</span>: <span class="text-emerald-400">"Maringá"</span>, <span class="text-zinc-400">"pop"</span>: <span class="text-amber-300">409657</span>}</div>
+                  <div>}</div>
+                </div>
+
+                <div id="output-terminal" class="px-3.5 py-2.5 bg-black/60 border-t border-white/[0.06] text-[11px] font-mono text-emerald-400 flex items-center justify-between">
+                  <span id="output-city">Londrina: 588.125 hab · Acesso: 0.02ms</span>
+                  <span class="text-zinc-600 text-[10px]">O(1)</span>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </article>
+
+        <!-- ================= CARD 2: CARCAÇA PARA SITE DE ARQUITETURA ================= -->
+        <article class="md:col-span-6 p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-border-hover transition-all duration-300 backdrop-blur-xl flex flex-col justify-between group hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(0,240,255,0.1)]">
+          
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">Web & Arquitetura</span>
+              <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-zinc-400 group-hover:text-brand-cyan transition-colors" aria-label="Abrir Carcaça para site de arquitetura">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
+
+            <h4 class="font-heading text-xl font-bold text-white group-hover:text-brand-cyan transition-colors">
+              Carcaça para site de arquitetura
+            </h4>
+
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Landing page minimalista de alto padrão contemporâneo desenvolvida para estúdio de arquitetura. Tipografia editorial, microinterações refinadas e Core Web Vitals 100.
+            </p>
+          </div>
+
+          <div class="pt-5 space-y-4">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white/[0.04] text-[10px] font-mono text-zinc-300">Tailwind CSS</span>
+              <span class="px-2 py-0.5 rounded bg-white/[0.04] text-[10px] font-mono text-zinc-300">SEO Local (PR/SP)</span>
+              <span class="px-2 py-0.5 rounded bg-white/[0.04] text-[10px] font-mono text-emerald-400">Core Web Vitals</span>
+            </div>
+
+            <a href="https://site-arquitetura-two.vercel.app/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-brand-cyan/40 text-xs font-mono text-white flex items-center justify-center gap-1.5 transition-all">
               <span>site-arquitetura-two.vercel.app</span>
-              <span class="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+              <i data-lucide="arrow-up-right" class="w-3 h-3 text-brand-cyan"></i>
             </a>
-          </li>
-
-          <li class="py-2.5 flex items-center justify-between group">
-            <span class="text-zinc-300">Agência Yellow</span>
-            <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-zinc-500 hover:text-white transition-colors flex items-center gap-1">
-              <span>agencia-yellow.vercel.app</span>
-              <span class="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
-            </a>
-          </li>
-
-          <li class="py-2.5 flex items-center justify-between group">
-            <span class="text-zinc-400">Repositórios de Código</span>
-            <a href="https://github.com/LA-Marques" target="_blank" rel="noopener noreferrer" class="text-zinc-400 hover:text-white transition-colors flex items-center gap-1 font-medium">
-              <span>Ver repositórios no GitHub</span>
-              <span class="inline-block transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- ==================== HABILIDADES (LINHA ÚNICA) ==================== -->
-    <section class="space-y-3 pt-2">
-      <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Tecnologias & Fundamentos</h2>
-      <p class="text-xs sm:text-sm font-mono text-zinc-400 leading-relaxed">
-        Python · Inteligência Artificial · Estruturas de Dados · Algoritmos (Big-O) · React · Next.js · Tailwind CSS · TypeScript · Git
-      </p>
-    </section>
-
-    <hr class="border-zinc-800/80" />
-
-    <!-- ==================== CONTATO ==================== -->
-    <section id="contato" class="space-y-6">
-      <div>
-        <h2 class="text-xs font-mono text-zinc-500 uppercase tracking-wider">Contato</h2>
-        <p class="text-sm text-zinc-400 mt-1 font-light">
-          Disponível para oportunidades acadêmicas, desenvolvimento de software e pesquisa em IA.
-        </p>
-      </div>
-
-      <!-- Lista Direta de Contatos -->
-      <div class="space-y-3 font-mono text-xs">
-        
-        <!-- E-mail Principal -->
-        <div class="flex items-center justify-between py-2 border-b border-zinc-800/60">
-          <span class="text-zinc-500">E-mail</span>
-          <div class="flex items-center gap-3">
-            <a href="mailto:araujo.luiz@ufpr.br" class="text-zinc-200 hover:underline">araujo.luiz@ufpr.br</a>
-            <button id="copy-btn" class="text-[11px] text-zinc-500 hover:text-white px-2 py-0.5 rounded border border-zinc-800 hover:border-zinc-700 transition-colors">
-              Copiar
-            </button>
           </div>
-        </div>
 
-        <!-- WhatsApp -->
-        <div class="flex items-center justify-between py-2 border-b border-zinc-800/60">
-          <span class="text-zinc-500">WhatsApp</span>
-          <a href="https://wa.me/5543991824157?text=Ol%C3%A1%20Luiz,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white transition-colors flex items-center gap-1">
-            <span>+55 (43) 99182-4157</span>
-            <span>↗</span>
-          </a>
-        </div>
+        </article>
 
-        <!-- LinkedIn -->
-        <div class="flex items-center justify-between py-2 border-b border-zinc-800/60">
-          <span class="text-zinc-500">LinkedIn</span>
-          <a href="https://www.linkedin.com/in/luiz-augusto-araujo/" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white transition-colors flex items-center gap-1">
-            <span>Luiz Augusto Araujo</span>
-            <span>↗</span>
-          </a>
-        </div>
+        <!-- ================= CARD 3: AGÊNCIA YELLOW ================= -->
+        <article class="md:col-span-6 p-6 rounded-2xl bg-brand-card border border-brand-border hover:border-brand-border-hover transition-all duration-300 backdrop-blur-xl flex flex-col justify-between group hover:-translate-y-1 hover:shadow-[0_15px_30px_-10px_rgba(250,204,21,0.1)]">
+          
+          <div class="space-y-3">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono text-zinc-500 uppercase tracking-wider">Growth & Branding</span>
+              <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-zinc-400 group-hover:text-amber-400 transition-colors" aria-label="Abrir Agência Yellow">
+                <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+              </a>
+            </div>
 
-        <!-- GitHub -->
-        <div class="flex items-center justify-between py-2 border-b border-zinc-800/60">
-          <span class="text-zinc-500">GitHub</span>
-          <a href="https://github.com/LA-Marques" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white transition-colors flex items-center gap-1">
-            <span>LA-Marques</span>
-            <span>↗</span>
-          </a>
-        </div>
+            <h4 class="font-heading text-xl font-bold text-white group-hover:text-amber-400 transition-colors">
+              Agência Yellow
+            </h4>
 
-        <!-- Instagram -->
-        <div class="flex items-center justify-between py-2 border-b border-zinc-800/60">
-          <span class="text-zinc-500">Instagram</span>
-          <a href="https://instagram.com/luizin.ag" target="_blank" rel="noopener noreferrer" class="text-zinc-300 hover:text-white transition-colors flex items-center gap-1">
-            <span>@luizin.ag</span>
-            <span>↗</span>
-          </a>
-        </div>
+            <p class="text-xs text-zinc-400 font-light leading-relaxed">
+              Plataforma digital comercial projetada para agência de marketing de crescimento. Foco em conversão de leads, narrativa visual e experiência fluida mobile-first.
+            </p>
+          </div>
+
+          <div class="pt-5 space-y-4">
+            <div class="flex flex-wrap gap-1.5">
+              <span class="px-2 py-0.5 rounded bg-white/[0.04] text-[10px] font-mono text-zinc-300">Design System</span>
+              <span class="px-2 py-0.5 rounded bg-white/[0.04] text-[10px] font-mono text-zinc-300">Mobile-First</span>
+              <span class="px-2 py-0.5 rounded bg-white/[0.04] text-[10px] font-mono text-amber-400">Conversão</span>
+            </div>
+
+            <a href="https://agencia-yellow.vercel.app/" target="_blank" rel="noopener noreferrer" class="w-full py-2 rounded-lg bg-white/[0.03] hover:bg-white/[0.08] border border-white/10 hover:border-amber-400/40 text-xs font-mono text-white flex items-center justify-center gap-1.5 transition-all">
+              <span>agencia-yellow.vercel.app</span>
+              <i data-lucide="arrow-up-right" class="w-3 h-3 text-amber-400"></i>
+            </a>
+          </div>
+
+        </article>
 
       </div>
 
-      <!-- Botão Direto de Ação (Acento único e sutil) -->
-      <div class="pt-2">
-        <a href="mailto:araujo.luiz@ufpr.br" class="inline-flex items-center justify-center px-4 py-2 rounded text-xs font-mono font-medium bg-white text-black hover:bg-zinc-200 transition-colors">
-          Enviar Mensagem Direta
+      <!-- Link Rápido GitHub -->
+      <div class="text-right pt-1">
+        <a href="https://github.com/LA-Marques" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-xs font-mono text-zinc-400 hover:text-white transition-colors">
+          <span>Ver todos os repositórios no GitHub</span>
+          <i data-lucide="arrow-up-right" class="w-3.5 h-3.5"></i>
         </a>
       </div>
+
     </section>
 
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="pt-8 pb-12 border-t border-zinc-800/60 flex items-center justify-between text-xs font-mono text-zinc-600">
-      <span>© 2026 Luiz Araujo</span>
-      <span>UFPR · Inteligência Artificial</span>
-    </footer>
+    <!-- ==================== 4. STACK TÉCNICA (ENXUTA & ELEGANTE) ==================== -->
+    <section id="stack" class="space-y-5">
+      <div class="flex items-center gap-2.5 font-mono text-xs text-brand-cyan tracking-widest uppercase">
+        <span class="w-4 h-[1px] bg-brand-cyan"></span>
+        <span>03 // Tecnologias & Competências</span>
+      </div>
 
-  </div>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        
+        <!-- Bloco 1: IA & Algoritmos -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border backdrop-blur-md space-y-2">
+          <div class="flex items-center gap-2 text-brand-cyan text-xs font-mono font-medium">
+            <i data-lucide="cpu" class="w-4 h-4"></i>
+            <span>IA & Algoritmos</span>
+          </div>
+          <p class="text-xs text-zinc-400 font-mono leading-relaxed">
+            Python · Tabelas Hash · Grafos · Big-O · Machine Learning · NumPy/Pandas
+          </p>
+        </div>
 
-  <!-- Microinteração para Copiar E-mail -->
+        <!-- Bloco 2: Engenharia de Software -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border backdrop-blur-md space-y-2">
+          <div class="flex items-center gap-2 text-emerald-400 text-xs font-mono font-medium">
+            <i data-lucide="layers" class="w-4 h-4"></i>
+            <span>Engenharia & Web</span>
+          </div>
+          <p class="text-xs text-zinc-400 font-mono leading-relaxed">
+            React · Next.js · TypeScript · Tailwind CSS · Clean Architecture · Git
+          </p>
+        </div>
+
+        <!-- Bloco 3: Performance & SEO -->
+        <div class="p-5 rounded-xl bg-brand-card border border-brand-border backdrop-blur-md space-y-2">
+          <div class="flex items-center gap-2 text-purple-400 text-xs font-mono font-medium">
+            <i data-lucide="zap" class="w-4 h-4"></i>
+            <span>Performance & SEO</span>
+          </div>
+          <p class="text-xs text-zinc-400 font-mono leading-relaxed">
+            Core Web Vitals · SEO Local · Schema JSON-LD · Mobile-First · WCAG
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== 5. CONTATO (MICROINTERAÇÕES REVELADORAS) ==================== -->
+    <section id="contato" class="space-y-6">
+      
+      <div class="flex items-center gap-2.5 font-mono text-xs text-brand-cyan tracking-widest uppercase">
+        <span class="w-4 h-[1px] bg-brand-cyan"></span>
+        <span>04 // Conexão & Contato</span>
+      </div>
+
+      <div class="p-8 sm:p-10 rounded-2xl bg-gradient-to-b from-brand-card to-brand-black/90 border border-brand-border backdrop-blur-2xl space-y-8 relative overflow-hidden">
+        
+        <div class="space-y-2 max-w-xl">
+          <h3 class="font-heading text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Vamos construir algo de alto nível?
+          </h3>
+          <p class="text-sm text-zinc-400 font-light leading-relaxed">
+            Aberto para oportunidades de desenvolvimento, pesquisa em Inteligência Artificial e projetos de software sob medida.
+          </p>
+        </div>
+
+        <!-- Grid de Contatos com Microinterações -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+          
+          <!-- WhatsApp -->
+          <a href="https://wa.me/5543991824157?text=Ol%C3%A1%20Luiz,%20vi%20seu%20portf%C3%B3lio%20e%20gostaria%20de%20conversar." target="_blank" rel="noopener noreferrer" class="group p-4 rounded-xl bg-white/[0.02] hover:bg-emerald-500/10 border border-white/[0.08] hover:border-emerald-500/40 transition-all duration-200 flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-3">
+              <i data-lucide="message-circle" class="w-4 h-4 text-emerald-400"></i>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-emerald-400 transition-colors"></i>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono text-zinc-500">WhatsApp</span>
+              <span class="block text-xs font-semibold text-white group-hover:text-emerald-400 transition-colors">
+                <span class="group-hover:hidden">+55 (43) 99182-4157</span>
+                <span class="hidden group-hover:inline">Conversar no Zap ↗</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/luiz-augusto-araujo/" target="_blank" rel="noopener noreferrer" class="group p-4 rounded-xl bg-white/[0.02] hover:bg-brand-cyan/10 border border-white/[0.08] hover:border-brand-cyan/40 transition-all duration-200 flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-3">
+              <i data-lucide="linkedin" class="w-4 h-4 text-brand-cyan"></i>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-brand-cyan transition-colors"></i>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono text-zinc-500">LinkedIn</span>
+              <span class="block text-xs font-semibold text-white group-hover:text-brand-cyan transition-colors">
+                <span class="group-hover:hidden">Luiz Augusto Araujo</span>
+                <span class="hidden group-hover:inline">Ver Perfil ↗</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/LA-Marques" target="_blank" rel="noopener noreferrer" class="group p-4 rounded-xl bg-white/[0.02] hover:bg-purple-500/10 border border-white/[0.08] hover:border-purple-500/40 transition-all duration-200 flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-3">
+              <i data-lucide="github" class="w-4 h-4 text-purple-400"></i>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-purple-400 transition-colors"></i>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono text-zinc-500">GitHub</span>
+              <span class="block text-xs font-semibold text-white group-hover:text-purple-400 transition-colors">
+                <span class="group-hover:hidden">LA-Marques</span>
+                <span class="hidden group-hover:inline">Ver Repos ↗</span>
+              </span>
+            </div>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/luizin.ag" target="_blank" rel="noopener noreferrer" class="group p-4 rounded-xl bg-white/[0.02] hover:bg-pink-500/10 border border-white/[0.08] hover:border-pink-500/40 transition-all duration-200 flex flex-col justify-between">
+            <div class="flex items-center justify-between mb-3">
+              <i data-lucide="instagram" class="w-4 h-4 text-pink-400"></i>
+              <i data-lucide="arrow-up-right" class="w-3.5 h-3.5 text-zinc-500 group-hover:text-pink-400 transition-colors"></i>
+            </div>
+            <div>
+              <span class="block text-[11px] font-mono text-zinc-500">Instagram</span>
+              <span class="block text-xs font-semibold text-white group-hover:text-pink-400 transition-colors">
+                <span class="group-hover:hidden">@luizin.ag</span>
+                <span class="hidden group-hover:inline">Seguir ↗</span>
+              </span>
+            </div>
+          </a>
+
+        </div>
+
+        <!-- Barra de E-mail com Cópia Instantânea -->
+        <div class="flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-black/40 border border-white/[0.06] font-mono text-xs">
+          <div class="flex items-center gap-2 text-zinc-400">
+            <i data-lucide="mail" class="w-4 h-4 text-brand-cyan"></i>
+            <span>E-mail Institucional:</span>
+            <a href="mailto:araujo.luiz@ufpr.br" class="text-white hover:text-brand-cyan transition-colors select-all font-medium">
+              araujo.luiz@ufpr.br
+            </a>
+          </div>
+          <button id="copy-email-btn" class="px-3 py-1.5 rounded-lg bg-white/5 hover:bg-brand-cyan hover:text-black border border-white/10 text-xs font-mono transition-all flex items-center gap-1.5">
+            <i data-lucide="copy" class="w-3.5 h-3.5"></i>
+            <span id="copy-feedback">Copiar E-mail</span>
+          </button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="max-w-4xl mx-auto px-5 sm:px-8 py-8 border-t border-white/[0.06] text-xs font-mono text-zinc-500 flex flex-col sm:flex-row items-center justify-between gap-3 relative z-10">
+    <div class="flex items-center gap-2">
+      <span class="w-1.5 h-1.5 rounded-full bg-brand-cyan"></span>
+      <span>© 2026 Luiz Araujo. Todos os direitos reservados.</span>
+    </div>
+    <div class="flex items-center gap-3 text-[11px] text-zinc-600">
+      <span>UFPR • IA & Software</span>
+      <span>·</span>
+      <span>Paraná, Brasil</span>
+    </div>
+  </footer>
+
+  <!-- ==================== SCRIPTS ==================== -->
   <script>
-    const copyBtn = document.getElementById('copy-btn');
-    if (copyBtn) {
+    // Inicialização dos Ícones Lucide
+    lucide.createIcons();
+
+    // Copiar E-mail com Feedback Visual
+    const copyBtn = document.getElementById('copy-email-btn');
+    const copyFeedback = document.getElementById('copy-feedback');
+
+    if (copyBtn && copyFeedback) {
       copyBtn.addEventListener('click', () => {
         navigator.clipboard.writeText('araujo.luiz@ufpr.br').then(() => {
-          copyBtn.innerText = 'Copiado';
-          copyBtn.classList.add('text-zinc-200');
+          copyFeedback.innerText = 'Copiado!';
+          copyBtn.classList.add('bg-emerald-500/20', 'text-emerald-400', 'border-emerald-500/40');
           setTimeout(() => {
-            copyBtn.innerText = 'Copiar';
-            copyBtn.classList.remove('text-zinc-200');
+            copyFeedback.innerText = 'Copiar E-mail';
+            copyBtn.classList.remove('bg-emerald-500/20', 'text-emerald-400', 'border-emerald-500/40');
           }, 2000);
         });
+      });
+    }
+
+    // Simulação O(1) do Motor de Dados do Paraná
+    const benchmarkBtn = document.getElementById('btn-benchmark');
+    const benchmarkFeedback = document.getElementById('benchmark-feedback');
+    const outputCity = document.getElementById('output-city');
+
+    if (benchmarkBtn && outputCity) {
+      const cidades = [
+        { nome: "Curitiba", pop: "1.773.733 hab", tempo: "0.01ms", regiao: "Capital" },
+        { nome: "Londrina", pop: "588.125 hab", tempo: "0.02ms", regiao: "Norte" },
+        { nome: "Jandaia do Sul", pop: "Polo UFPR Ativo", tempo: "0.02ms", regiao: "Vale do Ivaí" },
+        { nome: "Maringá", pop: "409.657 hab", tempo: "0.01ms", regiao: "Noroeste" }
+      ];
+      let i = 0;
+
+      benchmarkBtn.addEventListener('click', () => {
+        benchmarkFeedback.innerText = 'Consultando...';
+        benchmarkFeedback.classList.add('text-brand-cyan');
+
+        setTimeout(() => {
+          const c = cidades[i % cidades.length];
+          i++;
+          outputCity.innerHTML = `<span class="text-white font-semibold">${c.nome}</span>: ${c.pop} (${c.regiao}) · Acesso: <span class="text-brand-cyan">${c.tempo}</span>`;
+          benchmarkFeedback.innerText = 'OK (O(1))';
+          benchmarkFeedback.classList.remove('text-brand-cyan');
+          benchmarkFeedback.classList.add('text-emerald-400');
+          setTimeout(() => {
+            benchmarkFeedback.innerText = 'Pronto';
+            benchmarkFeedback.classList.remove('text-emerald-400');
+          }, 2000);
+        }, 200);
       });
     }
   </script>
