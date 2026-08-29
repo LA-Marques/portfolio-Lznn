@@ -121,7 +121,10 @@
     .text-shock-gradient {
       background: linear-gradient(180deg, #FFFFFF 0%, #FFCCE3 52%, #FF66B2 100%);
       -webkit-background-clip: text;
+      background-clip: text;
       -webkit-text-fill-color: transparent;
+      padding-bottom: 0.18em;
+      display: inline-block;
     }
 
     /* Bordas Finíssimas de 1px em Rosa Choque Claro Translúcido */
@@ -223,10 +226,10 @@
       </div>
 
       <!-- H1 TITÂNICO COM RECUO NÃO-CONVENCIONAL (QUEBRA DE CENTRALIZAÇÃO) -->
-      <div class="relative">
-        <h1 class="text-7xl sm:text-9xl md:text-[10.5rem] lg:text-[13rem] font-bold tracking-tighter leading-[0.8] text-shock-gradient select-none">
+      <div class="relative overflow-visible pb-2">
+        <h1 class="text-7xl sm:text-9xl md:text-[10.5rem] lg:text-[13rem] font-bold tracking-tighter leading-[0.88] text-shock-gradient select-none pb-4 sm:pb-8 overflow-visible">
           Luiz<br />
-          <span class="pl-6 sm:pl-20 md:pl-36 inline-block">Araujo.</span>
+          <span class="pl-6 sm:pl-20 md:pl-36 inline-block pb-3 sm:pb-6 overflow-visible">Araujo.</span>
         </h1>
       </div>
 
